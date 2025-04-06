@@ -1,98 +1,34 @@
-body {
-    font-family: sans-serif;
+/* Resetting Default Styles (Optional but Recommended) */
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
     margin: 0;
     padding: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0; /* Light gray background */
-}
-
-.nav a {
-    text-decoration: none;
-    margin-left: 20px;
-    color: #333;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-}
-
-.video-placeholder {
-    width: 80%;
-    height: 300px;
-    background-color: #ddd; /* Light gray placeholder */
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content {
-    display: flex;
-    width: 80%;
-}
-
-.text {
-    flex: 2;
-}
-
-.image-placeholder {
-    flex: 1;
-    height: 150px;
-    width: 150px;
-    border-radius: 50%; /* Circle */
-    background-color: #ddd; /* Light gray placeholder */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-around;
-    padding: 30px;
-    background-color: #f0f0f0;
-}
-
-.social {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ddd; /* Light gray placeholder */
-    margin: 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-
-    image-container img {
-        max-width: 100%; /* Image will not exceed container width */
-        height: auto;    /* Maintain aspect ratio */
-      }
-      
-      .video-container video {
-        max-width: 100%; /* Video will not exceed container width */
-        height: auto;    /* Maintain aspect ratio */
-      }
-      
-      /* Optional: Set a specific maximum width for the containers */
-      .image-container, .video-container {
-        max-width: 300px; /* Example: Limit to 300 pixels wide */
-        margin: 0 auto;  /* Center the container (optional) */
-      }
-}
+  }
+  
+  /* Base Styles for Images and Videos */
+  img, video {
+    max-width: 100%; /* Make images and videos responsive */
+    height: auto;    /* Maintain aspect ratio */
+    display: block;  /* Remove extra spacing below inline elements */
+  }
+  
+  /* Optional: Limit the width of the content containers */
+  .content, .another-content {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;  /* Center the content */
+    padding: 20px;    /* Add some padding for spacing */
+  }
+  
+  /* Optional: Additional styling for videos */
+  video {
+    margin-bottom: 20px; /* Add space below videos */
+  }
+  
+  /* Responsive Adjustments (Media Queries) */
+  @media (max-width: 600px) {
+    /* On smaller screens (e.g., mobile), make content containers full-width */
+    .content, .another-content {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
