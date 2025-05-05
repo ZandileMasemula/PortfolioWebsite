@@ -78,3 +78,8 @@ th {
     color: #e92977;
     font-weight: bold;
 }
+
+video,img{
+    width: 50%;
+    height: 50%;
+}
